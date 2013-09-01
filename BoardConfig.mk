@@ -76,7 +76,9 @@ BOARD_USE_SCREENCAP:= true
 BOARD_MOBILEDATA_INTERFACE_NAME:= "pdp0"
 
 # OpenGL drivers config file path
-BOARD_EGL_CFG := device/samsung/amazing-cdma/egl.cfg
+BOARD_EGL_CFG := device/samsung/amazing_cdma/egl.cfg
+
+TARGET_PREBUILT_KERNEL := device/samsung/amazing_cdma/kernel
 
 # No fallback font by default (space savings)
 #NO_FALLBACK_FONT:=true
