@@ -80,9 +80,7 @@ BOARD_MOBILEDATA_INTERFACE_NAME:= "pdp0"
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/samsung/amazing_cdma/egl.cfg
 
-#TARGET_PREBUILT_KERNEL := device/samsung/amazing_cdma/kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/amazing
-TARGET_KERNEL_CONFIG := centura_defconfig
+TARGET_PREBUILT_KERNEL := device/samsung/amazing_cdma/kernel
 
 # No fallback font by default (space savings)
 #NO_FALLBACK_FONT:=true
