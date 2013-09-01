@@ -19,6 +19,8 @@
 
 LOCAL_PATH:= $(call my-dir)
 
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/amazing_cdma/include
+
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
