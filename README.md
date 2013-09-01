@@ -1,6 +1,5 @@
-cm7_device_samsung_trebon
-=========================
+Android Device Samsung Amazing CDMA
+===================================
 
-GT-S7500 device folder for Cyanogenmod 7
+SCH-738C device folder for CyanogenMod 9
 
-Bear in mind that this won't produce a bootable build! It's still a wip.
