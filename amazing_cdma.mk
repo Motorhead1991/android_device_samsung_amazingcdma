@@ -33,24 +33,38 @@ PRODUCT_DEVICE := amazing_cdma
 PRODUCT_MODEL := SCH-S738C
 
 PRODUCT_PACKAGES += \
+    camera.msm7627a \
+    copybit.msm7627a \
+    gralloc.msm7627a \
+    hwcomposer.msm7627a \
+    gps.msm7627a \
+    lights.msm7627a \
+    audio.primary.msm7627a \
+    audio_policy.msm7627a \
+    audio.a2dp.default
+
+PRODUCT_PACKAGES += \
+    libmm-omxcore \
     libOmxCore \
-    libOmxVidEnc \
-    FM \
-    Torch \
-    make_ext4fs \
-    FM \
-    rzscontrol \
-    SamsungServiceMode \
-    bdaddr_read \
-    toggleshutter \
-    dexpreopt \
+    libOmxVenc \
+    libOmxVdec \
+    libstagefrighthw
+
+PRODUCT_PACKAGES += \
+    badblocks \
     e2fsck \
-    brcm_patchram_plus \
-    copybit.amazing_cdma \
-    lights.amazing_cdma \
-    gralloc.amazing_cdma \
-    setup_fs \
-    screencap
+    e2label \
+    mke2fs \
+    mke2fs.conf \
+    resize2fs \
+    tune2fs \
+    make_ext4fs \
+    setup_fs
+
+PRODUCT_PACKAGES += \
+    hciconfig \
+    hcitool \
+    libaudioutils
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := device/samsung/amazing_cdma/kernel
