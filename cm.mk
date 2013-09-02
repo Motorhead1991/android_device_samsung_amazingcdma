@@ -33,3 +33,5 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_NAME := cm_amazing_cdma
 PRODUCT_DEVICE := amazing_cdma
 PRODUCT_MODEL := SCH-S738C
+PRODUCT_BRAND := samsung
+PRODUCT_MANUFACTURER := samsung
