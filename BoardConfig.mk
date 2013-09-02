@@ -33,6 +33,7 @@ TARGET_NO_RADIOIMAGE := true
 
 TARGET_BOARD_PLATFORM := msm7k
 TARGET_ARCH_VARIANT := armv7-a-neon
+TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
 
@@ -81,6 +82,8 @@ BOARD_MOBILEDATA_INTERFACE_NAME:= "pdp0"
 BOARD_EGL_CFG := device/samsung/amazing_cdma/egl.cfg
 
 TARGET_PREBUILT_KERNEL := device/samsung/amazing_cdma/kernel
+TARGET_KERNEL_SOURCE := kernel/samsung/amazing
+TARGET_KERNEL_CONFIG := amazing_cdma_00_defconfig
 
 # No fallback font by default (space savings)
 #NO_FALLBACK_FONT:=true
