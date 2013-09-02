@@ -25,7 +25,6 @@ TARGET_SPECIFIC_HEADER_PATH := device/samsung/amazing_cdma/include
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
 USE_CAMERA_STUB:= true
-#BOARD_USE_FROYO_LIBCAMERA := true
 COPYBIT_MSM7K := true
 
 TARGET_NO_BOOTLOADER := true
@@ -72,9 +71,9 @@ BOARD_FM_DEVICE := bcm2049
 # Wifi related defines
 BOARD_WPA_SUPPLICANT_DRIVER := AWEXT
 BOARD_WLAN_DEVICE           := ar6000
-WIFI_DRIVER_MODULE_PATH     := /system/wifi/ar6000.ko
+WIFI_DRIVER_MODULE_PATH     := /system/lib/modules/ath.ko
 WIFI_DRIVER_MODULE_ARG      := ""
-WIFI_DRIVER_MODULE_NAME     := ar6000
+WIFI_DRIVER_MODULE_NAME     := ath
 
 WITH_JIT := true
 ENABLE_JSC_JIT := true
@@ -97,6 +96,7 @@ BOARD_GPS_NEEDS_XTRA := true
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_USES_QCOM_LIBS := true
 BOARD_USES_QCOM_GPS := true
+
 TARGET_USES_C2D_COMPOSITION := true
 TARGET_USES_OVERLAY := false
 TARGET_USES_SF_BYPASS := false
