@@ -241,4 +241,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # half of the device-specific product definition file takes care
 # of the aspects that require proprietary drivers that aren't
 # commonly available
-$(call inherit-product-if-exists, vendor/samsung/amazing_cdma/amazing_cdma-vendor-blobs.mk)
+$(call inherit-product-if-exists, vendor/samsung/amazing_cdma/amazing_cdma-vendor.mk)
