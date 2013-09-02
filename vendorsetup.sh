@@ -22,3 +22,4 @@
 
 add_lunch_combo full_amazing_cdma-eng
 add_lunch_combo full_amazing_cdma-userdebug
+add_lunch_combo cm_amazing_cdma-userdebug
