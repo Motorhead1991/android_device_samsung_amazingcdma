@@ -64,6 +64,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hciconfig \
     hcitool \
+    libhardware \
     libaudioutils
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -109,8 +110,6 @@ PRODUCT_COPY_FILES += \
     device/samsung/amazing_cdma/prebuilt/hostapd:system/bin/hostapd \
     device/samsung/amazing_cdma/prebuilt/hostapd.conf:system/etc/wifi/hostapd.conf
     
-
-
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
@@ -161,7 +160,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/amazing_cdma/prebuilt/modules/tuner-simple.ko:system/lib/modules/tuner-simple.ko \
     device/samsung/amazing_cdma/prebuilt/modules/tuner-types.ko:system/lib/modules/tuner-types.ko \
     device/samsung/amazing_cdma/prebuilt/modules/tuner-xc2028.ko:system/lib/modules/tuner-xc2028.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/xc5000.ko:system/lib/modules/xc5000.ko 
+    device/samsung/amazing_cdma/prebuilt/modules/xc5000.ko:system/lib/modules/xc5000.ko
     
 #Kernel Modules for Recovery (RFS)
 #PRODUCT_COPY_FILES += \
