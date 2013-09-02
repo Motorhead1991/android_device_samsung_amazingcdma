@@ -33,14 +33,14 @@ PRODUCT_DEVICE := amazing_cdma
 PRODUCT_MODEL := SCH-S738C
 
 PRODUCT_PACKAGES += \
-    camera.msm7627a \
-    copybit.msm7627a \
-    gralloc.msm7627a \
-    hwcomposer.msm7627a \
-    gps.msm7627a \
-    lights.msm7627a \
-    audio.primary.msm7627a \
-    audio_policy.msm7627a \
+    camera.msm7x27a \
+    copybit.msm7x27a \
+    gralloc.msm7x27a \
+    hwcomposer.msm7x27a \
+    gps.msm7x27a \
+    lights.msm7x27a \
+    audio.primary.msm7x27a \
+    audio_policy.msm7x27a \
     audio.a2dp.default
 
 PRODUCT_PACKAGES += \
@@ -64,7 +64,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     hciconfig \
     hcitool \
-    libhardware \
     libaudioutils
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
@@ -80,9 +79,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
-
-# proprietary side of the device
-#$(call inherit-product-if-exists, vendor/samsung/amazing_cdma/amazing_cdma-vendor.mk)
 
 # fstab
 PRODUCT_COPY_FILES += \
@@ -217,7 +213,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160 
 
-
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -236,6 +231,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dexopt-data-only=1 \
     ro.opengles.version=131072  \
     ro.compcache.default=0
+
+# For userdebug builds
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.allow.mock.location=1 \
+    ro.debuggable=1
 
 # See comment at the top of this file. This is where the other
 # half of the device-specific product definition file takes care
