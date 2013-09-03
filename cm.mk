@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 #$(call inherit-product, device/sample/products/backup_overlay.mk)
 # Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/cdma.mk)
-$(call inherit-product, device/samsung/amazing_cdma/amazing_cdma.mk)
+$(call inherit-product, device/samsung/amazing_cdma/full_amazing_cdma.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
