@@ -36,7 +36,7 @@ on early-boot
     setrlimit 8 67108864 67108864
 
 on boot
-on fs
+on emmc-fs
 # mount mmc partitions
     mount ext4 /dev/block/mmcblk0p16 /system  barrier=1
 # Remount /system ro to protect the filesystem
