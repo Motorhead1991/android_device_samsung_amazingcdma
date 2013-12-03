@@ -21,14 +21,15 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
+
 # Specify phone tech before including full_phone
 $(call inherit-product, vendor/cm/config/cdma.mk)
 $(call inherit-product, device/samsung/amazing_cdma/full_amazing_cdma.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+PRODUCT_RELEASE_NAME := amazing_cdma
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := cm_amazing_cdma
