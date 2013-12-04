@@ -150,12 +150,6 @@ BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_LDPI_RECOVERY := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB565"
 
-# AreaROM Recovery call
-#BOARD_AREAROM_RECOVERY := false
-#BOARD_VIP_RECOVERY := true
-
-#BOARD_CWM_RECOVERY := false
-
 BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/samsung/amazing_cdma/recovery/recovery_keys.c
 BOARD_CUSTOM_GRAPHICS           := ../../../device/samsung/amazing_cdma/recovery/graphics.c
 
