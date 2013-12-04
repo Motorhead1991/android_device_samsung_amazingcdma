@@ -88,6 +88,8 @@ TARGET_PREBUILT_KERNEL := device/samsung/amazing_cdma/kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/amazing
 TARGET_KERNEL_CONFIG := amazing_cdma_00_defconfig
 
+BOARD_USE_LEGACY_TOUCHSCREEN := true
+
 # No fallback font by default (space savings)
 #NO_FALLBACK_FONT:=true
 
