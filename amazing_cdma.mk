@@ -77,9 +77,6 @@ PRODUCT_PACKAGES += \
        sec_jack.kcm \
        sec_key.kcm
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_KERNEL):kernel
-
 # fstab
 PRODUCT_COPY_FILES += \
     device/samsung/amazing_cdma/prebuilt/vold.fstab:system/etc/vold.fstab
@@ -89,7 +86,7 @@ PRODUCT_COPY_FILES += \
     device/samsung/amazing_cdma/config/init.qcom.rc:root/init.qcom.rc \
     device/samsung/amazing_cdma/config/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/samsung/amazing_cdma/config/lpm.rc:root/lpm.rc \
-    device/samsung/amazing_cdma/config/ueventd.rc:root/ueventd.rc \
+    device/samsung/amazing_cdma/config/ueventd.qcom.rc:root/ueventd.qcom.rc \
     #device/samsung/amazing_cdma/init.emmc.rc:root/init.emmc.rc \
     device/samsung/amazing_cdma/recovery/fix_reboot.sh:recovery/root/sbin/fix_reboot.sh 
 
