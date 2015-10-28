@@ -84,7 +84,7 @@ PRODUCT_COPY_FILES += \
 # Init
 PRODUCT_COPY_FILES += \
     device/samsung/amazingcdma/config/init.qcom.rc:root/init.qcom.rc \
-    device/samsung/amazingcdma/config/init.qcom.rc:root/init.recovery.qcom.rc \
+    device/samsung/amazingcdma/recovery/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
     device/samsung/amazingcdma/config/init.qcom.usb.rc:root/init.qcom.usb.rc \
     device/samsung/amazingcdma/config/lpm.rc:root/lpm.rc \
     device/samsung/amazingcdma/config/ueventd.qcom.rc:root/ueventd.qcom.rc \

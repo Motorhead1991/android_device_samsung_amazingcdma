@@ -1,0 +1,10 @@
+on boot
+
+# Force the softkey backlight on
+write /sys/class/leds/button-backlight/brightness 255
+
+# fix reboot issue from recovery
+service fix_reboot /sbin/sh /sbin/fix_reboot.sh
+    user root
+    oneshot
+
