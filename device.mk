@@ -25,11 +25,11 @@
 
 #$(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
-#DEVICE_PACKAGE_OVERLAYS := device/samsung/amazing_cdma/overlay
+#DEVICE_PACKAGE_OVERLAYS := device/samsung/amazingcdma/overlay
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := full_amazing_cdma
-PRODUCT_DEVICE := amazing_cdma
+PRODUCT_NAME := full_amazingcdma
+PRODUCT_DEVICE := amazingcdma
 PRODUCT_MODEL := SCH-S738C
 
 PRODUCT_PACKAGES += \
@@ -67,7 +67,7 @@ PRODUCT_PACKAGES += \
     libaudioutils
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := device/samsung/amazing_cdma/kernel
+	LOCAL_KERNEL := device/samsung/amazingcdma/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -79,31 +79,31 @@ PRODUCT_PACKAGES += \
 
 # fstab
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/prebuilt/vold.fstab:system/etc/vold.fstab
+    device/samsung/amazingcdma/prebuilt/vold.fstab:system/etc/vold.fstab
 
 # Init
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/config/init.qcom.rc:root/init.qcom.rc \
-    device/samsung/amazing_cdma/config/init.qcom.usb.rc:root/init.qcom.usb.rc \
-    device/samsung/amazing_cdma/config/lpm.rc:root/lpm.rc \
-    device/samsung/amazing_cdma/config/ueventd.qcom.rc:root/ueventd.qcom.rc \
-    #device/samsung/amazing_cdma/init.emmc.rc:root/init.emmc.rc \
-    device/samsung/amazing_cdma/recovery/fix_reboot.sh:recovery/root/sbin/fix_reboot.sh 
+    device/samsung/amazingcdma/config/init.qcom.rc:root/init.qcom.rc \
+    device/samsung/amazingcdma/config/init.qcom.rc:root/init.recovery.qcom.rc \
+    device/samsung/amazingcdma/config/init.qcom.usb.rc:root/init.qcom.usb.rc \
+    device/samsung/amazingcdma/config/lpm.rc:root/lpm.rc \
+    device/samsung/amazingcdma/config/ueventd.qcom.rc:root/ueventd.qcom.rc \
+    device/samsung/amazingcdma/recovery/fix_reboot.sh:recovery/root/sbin/fix_reboot.sh 
 
 # 3d
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/egl.cfg:system/lib/egl/egl.cfg 
+    device/samsung/amazingcdma/egl.cfg:system/lib/egl/egl.cfg 
 
 # Audio
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/prebuilt/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
+    device/samsung/amazingcdma/prebuilt/AutoVolumeControl.txt:system/etc/AutoVolumeControl.txt
 
 # WLAN + BT
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
-    device/samsung/amazing_cdma/prebuilt/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
-    device/samsung/amazing_cdma/prebuilt/hostapd:system/bin/hostapd \
-    device/samsung/amazing_cdma/prebuilt/hostapd.conf:system/etc/wifi/hostapd.conf
+    device/samsung/amazingcdma/prebuilt/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
+    device/samsung/amazingcdma/prebuilt/dhcpcd.conf:system/etc/dhcpcd/dhcpcd.conf \
+    device/samsung/amazingcdma/prebuilt/hostapd:system/bin/hostapd \
+    device/samsung/amazingcdma/prebuilt/hostapd.conf:system/etc/wifi/hostapd.conf
     
 # Install the features available on this device.
 PRODUCT_COPY_FILES += \
@@ -120,50 +120,50 @@ PRODUCT_COPY_FILES += \
 
 #Kernel Modules
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/prebuilt/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/dal_remotetest.ko:system/lib/modules/al_remotetest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/evbug.ko:system/lib/modules/evbug.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/gspca_main.ko:system/lib/modules/gspca_main.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/max2165.ko:system/lib/modules/max2165.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mc44s803.ko:system/lib/modules/mc44s803.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mt2060.ko:system/lib/modules/mt2060.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mt20xx.ko:system/lib/modules/mt20xx.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mt2131.ko:system/lib/modules/mt2131.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mt2266.ko:system/lib/modules/mt2266.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_erasepart.ko:system/lib/modules/mtd_erasepart.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_nandecctest.ko:system/lib/modules/mtd_nandecctest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_oobtest.ko:system/lib/modules/mtd_oobtest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_pagetest.ko:system/lib/modules/mtd_pagetest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_readtest.ko:system/lib/modules/mtd_readtest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_speedtest.ko:system/lib/modules/mtd_speedtest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_stresstest.ko:system/lib/modules/mtd_stresstest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_subpagetest.ko:system/lib/modules/mtd_subpagetest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mtd_torturetest.ko:system/lib/modules/mtd_torturetest.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mxl5005s.ko:system/lib/modules/mxl5005s.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/mxl5007t.ko:system/lib/modules/mxl5007t.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/qt1010.ko:system/lib/modules/qt1010.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tda18218.ko:system/lib/modules/tda18218.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tda18271.ko:system/lib/modules/tda18271.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tda827x.ko:system/lib/modules/tda827x.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tda8290.ko:system/lib/modules/tda8290.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tda9887.ko:system/lib/modules/tda9887.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tea5761.ko:system/lib/modules/tea5761.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tea5767.ko:system/lib/modules/tea5767.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tuner-simple.ko:system/lib/modules/tuner-simple.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tuner-types.ko:system/lib/modules/tuner-types.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/tuner-xc2028.ko:system/lib/modules/tuner-xc2028.ko \
-    device/samsung/amazing_cdma/prebuilt/modules/xc5000.ko:system/lib/modules/xc5000.ko
+    device/samsung/amazingcdma/prebuilt/modules/ansi_cprng.ko:system/lib/modules/ansi_cprng.ko \
+    device/samsung/amazingcdma/prebuilt/modules/dal_remotetest.ko:system/lib/modules/al_remotetest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/evbug.ko:system/lib/modules/evbug.ko \
+    device/samsung/amazingcdma/prebuilt/modules/gspca_main.ko:system/lib/modules/gspca_main.ko \
+    device/samsung/amazingcdma/prebuilt/modules/librasdioif.ko:system/lib/modules/librasdioif.ko \
+    device/samsung/amazingcdma/prebuilt/modules/max2165.ko:system/lib/modules/max2165.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mc44s803.ko:system/lib/modules/mc44s803.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mmc_test.ko:system/lib/modules/mmc_test.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mt2060.ko:system/lib/modules/mt2060.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mt20xx.ko:system/lib/modules/mt20xx.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mt2131.ko:system/lib/modules/mt2131.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mt2266.ko:system/lib/modules/mt2266.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_erasepart.ko:system/lib/modules/mtd_erasepart.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_nandecctest.ko:system/lib/modules/mtd_nandecctest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_oobtest.ko:system/lib/modules/mtd_oobtest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_pagetest.ko:system/lib/modules/mtd_pagetest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_readtest.ko:system/lib/modules/mtd_readtest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_speedtest.ko:system/lib/modules/mtd_speedtest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_stresstest.ko:system/lib/modules/mtd_stresstest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_subpagetest.ko:system/lib/modules/mtd_subpagetest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mtd_torturetest.ko:system/lib/modules/mtd_torturetest.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mxl5005s.ko:system/lib/modules/mxl5005s.ko \
+    device/samsung/amazingcdma/prebuilt/modules/mxl5007t.ko:system/lib/modules/mxl5007t.ko \
+    device/samsung/amazingcdma/prebuilt/modules/qt1010.ko:system/lib/modules/qt1010.ko \
+    device/samsung/amazingcdma/prebuilt/modules/scsi_wait_scan.ko:system/lib/modules/scsi_wait_scan.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tda18218.ko:system/lib/modules/tda18218.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tda18271.ko:system/lib/modules/tda18271.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tda827x.ko:system/lib/modules/tda827x.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tda8290.ko:system/lib/modules/tda8290.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tda9887.ko:system/lib/modules/tda9887.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tea5761.ko:system/lib/modules/tea5761.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tea5767.ko:system/lib/modules/tea5767.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tuner-simple.ko:system/lib/modules/tuner-simple.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tuner-types.ko:system/lib/modules/tuner-types.ko \
+    device/samsung/amazingcdma/prebuilt/modules/tuner-xc2028.ko:system/lib/modules/tuner-xc2028.ko \
+    device/samsung/amazingcdma/prebuilt/modules/xc5000.ko:system/lib/modules/xc5000.ko
     
 #Kernel Modules for Recovery (RFS)
 #PRODUCT_COPY_FILES += \
-#    device/samsung/amazing_cdma/prebuilt/modules/recovery/fsr.ko:recovery/root/lib/modules/fsr.ko \
-#    device/samsung/amazing_cdma/prebuilt/modules/recovery/fsr_stl.ko:recovery/root/lib/modules/fsr_stl.ko \
-#    device/samsung/amazing_cdma/prebuilt/modules/recovery/rfs_fat.ko:recovery/root/lib/modules/rfs_fat.ko \
-#    device/samsung/amazing_cdma/prebuilt/modules/recovery/rfs_glue.ko:recovery/root/lib/modules/rfs_glue.ko \
-#    device/samsung/amazing_cdma/prebuilt/modules/recovery/sec_param.ko:recovery/root/lib/modules/sec_param.ko
+#    device/samsung/amazingcdma/prebuilt/modules/recovery/fsr.ko:recovery/root/lib/modules/fsr.ko \
+#    device/samsung/amazingcdma/prebuilt/modules/recovery/fsr_stl.ko:recovery/root/lib/modules/fsr_stl.ko \
+#    device/samsung/amazingcdma/prebuilt/modules/recovery/rfs_fat.ko:recovery/root/lib/modules/rfs_fat.ko \
+#    device/samsung/amazingcdma/prebuilt/modules/recovery/rfs_glue.ko:recovery/root/lib/modules/rfs_glue.ko \
+#    device/samsung/amazingcdma/prebuilt/modules/recovery/sec_param.ko:recovery/root/lib/modules/sec_param.ko
 
 # Graphics for recovery
 PRODUCT_COPY_FILES += \
@@ -183,17 +183,17 @@ PRODUCT_COPY_FILES += \
 
 #Media profile
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
-    device/samsung/amazing_cdma/prebuilt/audio.conf:system/etc/bluetooth/audio.conf
+    device/samsung/amazingcdma/prebuilt/media_profiles.xml:system/etc/media_profiles.xml \
+    device/samsung/amazingcdma/prebuilt/audio.conf:system/etc/bluetooth/audio.conf
 ## keymap
 PRODUCT_COPY_FILES += \
-    device/samsung/amazing_cdma/keylayout/7x27a_kp.kl:system/usr/keylayout/7x27a_kp.kl \
-    device/samsung/amazing_cdma/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
-    device/samsung/amazing_cdma/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
-    device/samsung/amazing_cdma/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
-    device/samsung/amazing_cdma/keylayout/sec_key.kl:system/usr/keylayout/sec_key.kl \
-    device/samsung/amazing_cdma/keylayout/sec_powerkey.kl:system/usr/keylayout/sec_powerkey.kl \
-    device/samsung/amazing_cdma/keylayout/surf_keypad.kl:system/usr/keylayout/surf_keypad.kl
+    device/samsung/amazingcdma/keylayout/7x27a_kp.kl:system/usr/keylayout/7x27a_kp.kl \
+    device/samsung/amazingcdma/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/samsung/amazingcdma/keylayout/qwerty.kl:system/usr/keylayout/qwerty.kl \
+    device/samsung/amazingcdma/keylayout/sec_jack.kl:system/usr/keylayout/sec_jack.kl \
+    device/samsung/amazingcdma/keylayout/sec_key.kl:system/usr/keylayout/sec_key.kl \
+    device/samsung/amazingcdma/keylayout/sec_powerkey.kl:system/usr/keylayout/sec_powerkey.kl \
+    device/samsung/amazingcdma/keylayout/surf_keypad.kl:system/usr/keylayout/surf_keypad.kl
 
 PRODUCT_PROPERTY_OVERRIDES := \
     keyguard.no_require_sim=true \
@@ -241,4 +241,4 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
 # half of the device-specific product definition file takes care
 # of the aspects that require proprietary drivers that aren't
 # commonly available
-$(call inherit-product-if-exists, vendor/samsung/amazing_cdma/amazing_cdma-vendor.mk)
+$(call inherit-product-if-exists, vendor/samsung/amazingcdma/amazing_cdma-vendor.mk)
