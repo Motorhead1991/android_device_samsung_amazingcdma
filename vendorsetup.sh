@@ -20,6 +20,6 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-add_lunch_combo full_amazing_cdma-eng
-add_lunch_combo full_amazing_cdma-userdebug
-add_lunch_combo cm_amazing_cdma-userdebug
+add_lunch_combo full_amazingcdma-eng
+add_lunch_combo full_amazingcdma-userdebug
+add_lunch_combo cm_amazingcdma-userdebug

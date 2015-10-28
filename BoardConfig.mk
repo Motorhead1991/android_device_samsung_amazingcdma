@@ -19,7 +19,7 @@
 
 LOCAL_PATH:= $(call my-dir)
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/amazing_cdma/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/amazingcdma/include
 
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
@@ -47,7 +47,7 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 # Removed -mtune=cortex-a5
 
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
-TARGET_BOOTLOADER_BOARD_NAME := amazing-cdma
+TARGET_BOOTLOADER_BOARD_NAME := amazingcdma
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
 
 # assert
@@ -59,7 +59,7 @@ TARGET_USE_SOFTWARE_AUDIO_AAC := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 BOARD_HAVE_BLUETOOTH_CUSTOM_HCIATTACH := true
-BOARD_CUSTOM_BLUEDROID := ../../../device/samsung/amazing_cdma/bluedroid/bluetooth.c
+BOARD_CUSTOM_BLUEDROID := ../../../device/samsung/amazingcdma/bluedroid/bluetooth.c
 BOARD_FORCE_STATIC_A2DP := true
 HAS_BCM20780 := true
 BOARD_GLOBAL_CFLAGS += -DHAS_BCM20780
@@ -82,11 +82,11 @@ BOARD_USE_SCREENCAP:= true
 BOARD_MOBILEDATA_INTERFACE_NAME:= "pdp0"
 
 # OpenGL drivers config file path
-BOARD_EGL_CFG := device/samsung/amazing_cdma/egl.cfg
+BOARD_EGL_CFG := device/samsung/amazingcdma/egl.cfg
 
-TARGET_PREBUILT_KERNEL := device/samsung/amazing_cdma/kernel
-TARGET_KERNEL_SOURCE := kernel/samsung/amazing
-TARGET_KERNEL_CONFIG := amazing_cdma_00_defconfig
+TARGET_PREBUILT_KERNEL := device/samsung/amazingcdma/kernel
+#TARGET_KERNEL_SOURCE := kernel/samsung/amazing
+#TARGET_KERNEL_CONFIG := amazing_cdma_00_defconfig
 
 # No fallback font by default (space savings)
 #NO_FALLBACK_FONT:=true
@@ -121,7 +121,7 @@ BOARD_USE_USB_MASS_STORAGE_SWITCH := true
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/usb_mass_storage/gadget/lun"
 BOARD_UMS_LUNFILE := "/sys/devices/platform/usb_mass_storage/lun0/file"
 
-BOARD_CUSTOM_USB_CONTROLLER := ../../device/samsung/amazing_cdma/UsbController.cpp
+BOARD_CUSTOM_USB_CONTROLLER := ../../device/samsung/amazingcdma/UsbController.cpp
 
 TARGET_LIBAGL_USE_GRALLOC_COPYBITS := true 
 
@@ -132,8 +132,7 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 524288000
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 979369984
 BOARD_FLASH_BLOCK_SIZE := 4096
 
-TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/amazing_cdma/recovery_kernel
-TARGET_RECOVERY_INITRC := device/samsung/amazing_cdma/recovery/recovery.rc
+TARGET_PREBUILT_RECOVERY_KERNEL := device/samsung/amazingcdma/recovery_kernel
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk0p23
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1p1
 BOARD_HAS_NO_MISC_PARTITON := true
@@ -153,8 +152,8 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGB565"
 
 #BOARD_CWM_RECOVERY := false
 
-BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/samsung/amazing_cdma/recovery/recovery_keys.c
-BOARD_CUSTOM_GRAPHICS           := ../../../device/samsung/amazing_cdma/recovery/graphics.c
+BOARD_CUSTOM_RECOVERY_KEYMAPPING:= ../../device/samsung/amazingcdma/recovery/recovery_keys.c
+# BOARD_CUSTOM_GRAPHICS           := ../../../device/samsung/amazingcdma/recovery/graphics.c
 
 # TWRP
 DEVICE_RESOLUTION := 320x480

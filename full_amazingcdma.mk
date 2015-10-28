@@ -22,18 +22,16 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
-# Specify phone tech before including full_phone
-$(call inherit-product, vendor/cm/config/cdma.mk)
-$(call inherit-product, device/samsung/amazingcdma/full_amazingcdma.mk)
-
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, device/samsung/amazingcdma/device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 PRODUCT_RELEASE_NAME := amazing_cdma
 
 # Discard inherited values and use our own instead.
-PRODUCT_NAME := cm_amazingcdma
+PRODUCT_NAME := full_amazingcdma
 PRODUCT_DEVICE := amazingcdma
 PRODUCT_MODEL := SCH-S738C
-PRODUCT_BRAND := samsung
-PRODUCT_MANUFACTURER := samsung
+
+DEFAULT_PROPERTY_OVERRIDES += \
+    ro.build.product=amazing_cdma \
+    ro.product.device=amazing_cdma
