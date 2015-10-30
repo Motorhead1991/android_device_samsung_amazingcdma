@@ -52,7 +52,7 @@ TARGET_BOOTLOADER_BOARD_NAME := amazingcdma
 BOARD_AVOID_DRAW_TEXTURE_EXTENSION := true
 
 # assert
-TARGET_OTA_ASSERT_DEVICE := amazing_cdma,SCH-S738C
+TARGET_OTA_ASSERT_DEVICE := amazingcdma,SCH-S738C
 
 TARGET_OVERLAY_ALWAYS_DETERMINES_FORMAT := true
 TARGET_USE_SOFTWARE_AUDIO_AAC := true
@@ -86,8 +86,8 @@ BOARD_MOBILEDATA_INTERFACE_NAME:= "pdp0"
 BOARD_EGL_CFG := device/samsung/amazingcdma/egl.cfg
 
 TARGET_PREBUILT_KERNEL := device/samsung/amazingcdma/kernel
-#TARGET_KERNEL_SOURCE := kernel/samsung/amazing
-#TARGET_KERNEL_CONFIG := amazing_cdma_00_defconfig
+TARGET_KERNEL_SOURCE := kernel/samsung/amazing
+TARGET_KERNEL_CONFIG := amazing_cdma_00_defconfig
 
 # No fallback font by default (space savings)
 #NO_FALLBACK_FONT:=true
