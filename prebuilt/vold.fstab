@@ -13,25 +13,12 @@
 ######################
 
 # internal sdcard
-{
-	ums_path = /sys/devices/platform/usb_mass_storage/lun0/file
-	asec = disable
-	discard = enable
-}
 dev_mount sdcard /mnt/sdcard 23 /devices/platform/msm_sdcc.3/mmc_host/
 
 # externel sdcard
-{	
-	ums_path = /sys/devices/platform/usb_mass_storage/lun1/file
-	asec = enable
-}
-dev_mount sdcard1 /mnt/sdcard/external_sd auto /devices/platform/msm_sdcc.1/mmc_host/
+dev_mount sdcard1 /mnt/external_sd auto /devices/platform/msm_sdcc.1/mmc_host/
 
-# otg sdcard
-{
-    ums_path = /dev/zero
-    asec = disable
-}
-usb_mount sdcard2 /mnt/sdcard/usbStorage auto /devices/platform/msm_hsusb_host.0
+# otg support
+usb_mount sdcard2 /mnt/usbStorage auto /devices/platform/msm_hsusb_host.0
 #end line ## keep this line
 
