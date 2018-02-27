@@ -17,35 +17,42 @@
 # Product-specific compile-time definitions.
 #
 
-LOCAL_PATH:= $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 TARGET_SPECIFIC_HEADER_PATH := device/samsung/amazingcdma/include
 
 # WARNING: This line must come *before* including the proprietary
 # variant, so that it gets overwritten by the parent (which goes
 # against the traditional rules of inheritance).
-USE_CAMERA_STUB:= true
+USE_CAMERA_STUB := true
 COPYBIT_MSM7K := true
 
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
+TARGET_NO_INITLOGO := true
 
 COMMON_GLOBAL_CFLAGS += -DQCOM_HARDWARE
 COMMON_GLOBAL_CFLAGS += -DBINDER_COMPAT
 COMMON_GLOBAL_CFLAGS += -DSAMSUNG_CAMERA_LEGACY
 
+# Arch
 TARGET_BOARD_PLATFORM := msm7x27a
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_ARCH := arm
-TARGET_CPU_VARIANT := cortex-a9
+TARGET_ARCH_VARIANT_CPU := cortex-a8
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
+ARCH_ARM_HAVE_NEON := false
 
-TARGET_ARCH_VARIANT_FPU := vfpv3
-
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
-# Removed -mtune=cortex-a5
+# Bionic Optimization
+TARGET_CORTEX_CACHE_LINE_32 := true
+ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
+ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_USE_SCORPION_BIONIC_OPTIMIZATION := true
+ARCH_ARM_HAVE_ARMV7A := true
+USE_ALL_OPTIMIZED_STRING_FUNCS := true
+TARGET_GLOBAL_CFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
+TARGET_GLOBAL_CPPFLAGS += -mtune=cortex-a8 -mfpu=neon -mfloat-abi=softfp
 
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 TARGET_BOOTLOADER_BOARD_NAME := amazingcdma
